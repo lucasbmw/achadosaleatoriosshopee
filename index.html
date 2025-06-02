@@ -1,176 +1,152 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Achadinhos da Shopee</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Achadinhos Incríveis 🛍️</title>
   <style>
     body {
-      background-color: #000;
-      color: #fff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      padding: 0 16px 40px;
+      padding: 0;
+      background-color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
     }
     header {
-      background-color: #ee4d2d;
-      padding: 20px;
-      text-align: center;
+      background-color: #ff5c00;
       color: white;
-      border-radius: 8px;
-      margin: 24px auto 16px;
-      max-width: 1000px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-    header img {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid white;
-    }
-    header div {
       text-align: center;
+      padding: 20px;
     }
     header h1 {
       margin: 0;
-      font-size: 24px;
+      font-size: 28px;
     }
-    header span {
+    header p {
+      margin: 8px 0 0 0;
       font-size: 16px;
     }
-    #search-container {
-      max-width: 600px;
-      margin: 0 auto 32px;
+    .profile {
+      margin-top: 10px;
+    }
+    .profile img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 3px solid white;
+    }
+    .search-bar {
+      margin: 20px auto;
       text-align: center;
     }
-    #search-input {
-      width: 100%;
+    .search-bar input {
+      width: 60%;
       max-width: 400px;
-      padding: 10px 16px;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
       font-size: 16px;
-      border-radius: 30px;
-      border: 2px solid #ee4d2d;
-      outline: none;
-      background-color: #111;
-      color: white;
-      transition: border-color 0.3s ease;
     }
-    #search-input:focus {
-      border-color: #ff642e;
-      box-shadow: 0 0 8px #ff642e88;
-    }
-    main {
+    .container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 32px;
-      max-width: 1000px;
+      gap: 24px;
+      padding: 24px;
+      max-width: 1200px;
       margin: 0 auto;
     }
-    .produto {
-      border: 1px solid #ee4d2d;
+    .product {
+      border: 1px solid #ccc;
       border-radius: 12px;
       padding: 16px;
       text-align: center;
-      background-color: #111;
-      box-shadow: 0 0 10px #ee4d2d44;
-      transition: transform 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
     }
-    .produto:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 20px #ee4d2d88;
+    .product:hover {
+      transform: translateY(-5px);
     }
-    .produto img {
+    .product img {
       width: 100%;
       border-radius: 8px;
       margin-bottom: 12px;
     }
-    .produto h3 {
+    .product h3 {
       font-size: 18px;
-      margin: 8px 0 16px;
-      flex-grow: 1;
+      margin: 8px 0;
+      color: #333;
     }
     .btn-link {
       display: inline-block;
-      padding: 12px 24px;
-      background-color: #ee4d2d;
+      padding: 10px 20px;
+      background-color: #ff5c00;
       color: white;
       text-decoration: none;
-      border-radius: 30px;
-      font-weight: 700;
-      font-size: 16px;
-      box-shadow: 0 4px 10px #ee4d2dcc;
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s;
     }
     .btn-link:hover {
-      background-color: #ff642e;
-      box-shadow: 0 6px 15px #ff642eee;
+      background-color: #d94f00;
     }
   </style>
 </head>
 <body>
 
-  <!-- Cabeçalho -->
   <header>
-    <img src="LINK_DA_SUA_FOTO_AQUI" alt="Foto de perfil TikTok" />
-    <div>
-      <h1>Achadinhos da Shopee 🛒</h1>
-      <span>Confira os melhores produtos com um clique!</span>
+    <h1>Achadinhos Incríveis 🛍️</h1>
+    <p>Confira os melhores produtos selecionados para você!</p>
+    <div class="profile">
+      <img src="LINK_DA_SUA_FOTO_TIKTOK" alt="Minha foto de perfil">
     </div>
   </header>
 
-  <!-- Barra de pesquisa -->
-  <div id="search-container">
-    <input type="text" id="search-input" placeholder="🔍 Pesquise produtos..." />
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="🔍 Buscar produto...">
   </div>
 
-  <!-- Produtos -->
-  <main id="produtos-container">
-    <div class="produto">
-      <img src="https://i.imgur.com/RDpJTuf.jpeg" alt="3D Led Relógio De Parede Digital" />
-      <h3>3D Led Relógio De Parede Digital / Design Moderno Luz Noturna Decoração Relógios / Mesa De Desktop Decoração De Casa</h3>
-      <a class="btn-link" href="https://s.shopee.com.br/5AgLIiJ8Rt" target="_blank" rel="noopener noreferrer">👉 Garanta o seu na Shopee</a>
+  <div class="container" id="productContainer">
+
+    <!-- Produto 1 -->
+    <div class="product">
+      <img src="https://i.imgur.com/RDpJTuf.jpeg" alt="Relógio 3D">
+      <h3>Relógio de Parede 3D com LED Moderno</h3>
+      <a class="btn-link" href="https://s.shopee.com.br/5AgLIiJ8Rt" target="_blank">👉 Quero ver esse produto</a>
     </div>
 
-    <div class="produto">
-      <img src="https://i.imgur.com/futnWqe.jpeg" alt="Espelho Redondo Lapidado" />
-      <h3>Espelho Redondo Lapidado 60cm Para Sala + Kit Instalação</h3>
-      <a class="btn-link" href="https://s.shopee.com.br/gDvu9A24w" target="_blank" rel="noopener noreferrer">👉 Garanta o seu na Shopee</a>
+    <!-- Produto 2 -->
+    <div class="product">
+      <img src="https://i.imgur.com/futnWqe.jpeg" alt="Espelho Redondo">
+      <h3>Espelho Redondo Lapidado 60cm + Kit Instalação</h3>
+      <a class="btn-link" href="https://s.shopee.com.br/gDvu9A24w" target="_blank">👉 Quero ver esse produto</a>
     </div>
 
-    <div class="produto">
-      <img src="https://i.imgur.com/ATXi3B3.jpeg" alt="Suporte Para Escova De Dentes UV" />
-      <h3>Suporte Para Escova De Dentes Esterilizador Com Luz UV Antibacteriano Automático De Creme Dental</h3>
-      <a class="btn-link" href="https://s.shopee.com.br/4VQeUkVWYU" target="_blank" rel="noopener noreferrer">👉 Garanta o seu na Shopee</a>
+    <!-- Produto 3 -->
+    <div class="product">
+      <img src="https://i.imgur.com/ATXi3B3.jpeg" alt="Suporte Escova UV">
+      <h3>Suporte para Escova com Luz UV e Creme Dental Automático</h3>
+      <a class="btn-link" href="https://s.shopee.com.br/4VQeUkVWYU" target="_blank">👉 Quero ver esse produto</a>
     </div>
-  </main>
 
-  <!-- Script para busca -->
+  </div>
+
   <script>
-    const input = document.getElementById('search-input');
-    const produtos = document.querySelectorAll('.produto');
+    const searchInput = document.getElementById('searchInput');
+    const products = document.querySelectorAll('.product');
 
-    input.addEventListener('input', () => {
-      const filtro = input.value.toLowerCase();
-      produtos.forEach(produto => {
-        const titulo = produto.querySelector('h3').textContent.toLowerCase();
-        if (titulo.includes(filtro)) {
-          produto.style.display = 'flex';
-        } else {
-          produto.style.display = 'none';
-        }
+    searchInput.addEventListener('input', function() {
+      const searchTerm = this.value.toLowerCase();
+      products.forEach(product => {
+        const title = product.querySelector('h3').textContent.toLowerCase();
+        product.style.display = title.includes(searchTerm) ? 'block' : 'none';
       });
     });
   </script>
+
 </body>
 </html>
+
 
 
 
