@@ -1,65 +1,53 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Achadinhos da Shopee 🛍️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Achadinhos da Shopee 🛒</title>
   <style>
     body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #111;
+      background-color: #000;
       color: white;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
     }
     header {
-      background-color: #f15420;
+      background-color: #ee4d2d;
       padding: 20px;
       text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 28px;
-    }
-    header p {
-      margin: 5px 0 0;
-      font-size: 16px;
-    }
-    .profile {
-      display: flex;
-      justify-content: center;
-      margin-top: 10px;
-    }
-    .profile img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      border: 3px solid white;
+      font-size: 24px;
+      font-weight: bold;
+      border-bottom: 4px solid #ff784e;
+      color: #fff;
     }
     .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
       max-width: 1200px;
-      margin: 30px auto;
-      padding: 0 15px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
     }
     .card {
-      background-color: #1a1a1a;
+      background-color: #111;
       border: 1px solid #333;
-      border-radius: 15px;
-      max-width: 350px;
-      padding: 15px;
+      border-radius: 16px;
+      padding: 16px;
       text-align: center;
-      transition: transform 0.3s ease;
+      transition: transform 0.2s;
     }
     .card:hover {
-      transform: scale(1.03);
+      transform: scale(1.02);
     }
     .card img {
       width: 100%;
-      border-radius: 10px;
-      margin-bottom: 10px;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      object-fit: cover;
+      height: 200px;
     }
     .card h3 {
       font-size: 18px;
@@ -68,59 +56,86 @@
     .btn {
       display: inline-block;
       padding: 10px 20px;
-      background-color: #f15420;
+      background-color: #ee4d2d;
       color: white;
       text-decoration: none;
       border-radius: 8px;
       font-weight: bold;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.2s;
     }
     .btn:hover {
-      background-color: #c54116;
+      background-color: #ff6543;
     }
+    /* Espaço para foto do TikTok */
+    .profile-tiktok {
+      max-width: 1200px;
+      margin: 0 auto 40px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+    .profile-tiktok img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid #ee4d2d;
+      object-fit: cover;
+    }
+    /* Força duas colunas em celular */
     @media (max-width: 600px) {
-      .container {
-        gap: 15px;
-      }
-      .card {
-        flex: 1 1 calc(50% - 15px);
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Achadinhos da Shopee 🛍️</h1>
-    <p>Confira os melhores produtos com um clique!</p>
-    <div class="profile">
-      <img src="https://i.imgur.com/XXXXX.jpg" alt="Foto do TikTok"/>
-    </div>
-  </header>
+  <header>Achadinhos da Shopee 🛒</header>
+
+  <!-- Espaço para sua foto do TikTok -->
+  <div class="profile-tiktok">
+    <img src="https://i.imgur.com/SEU_LINK_DE_FOTO_AQUI.jpg" alt="Minha Foto TikTok" />
+  </div>
 
   <div class="container">
+    <div class="grid">
 
-    <!-- Produto 1 -->
-    <div class="card">
-      <img src="https://i.imgur.com/RDpJTuf.jpeg" alt="Produto 1">
-      <h3>3D Led Relógio De Parede Digital / Luz Noturna Moderna</h3>
-      <a class="btn" href="https://s.shopee.com.br/5AgLIiJ8Rt" target="_blank">👉 Quero Conferir</a>
+      <!-- Produto 1 -->
+      <div class="card">
+        <img src="https://i.imgur.com/RDpJTuf.jpeg" alt="3D Led Relógio De Parede Digital" />
+        <h3>3D Led Relógio De Parede Digital / Design Moderno Luz Noturna Decoração Relógios / Mesa De Desktop Decoração De Casa</h3>
+        <a class="btn" href="https://s.shopee.com.br/5AgLIiJ8Rt" target="_blank">👉 Conferir Produto</a>
+      </div>
+
+      <!-- Produto 2 -->
+      <div class="card">
+        <img src="https://i.imgur.com/futnWqe.jpeg" alt="Espelho Redondo Lapidado" />
+        <h3>Espelho Redondo Lapidado 60cm Para Sala + Kit Instalação</h3>
+        <a class="btn" href="https://s.shopee.com.br/gDvu9A24w" target="_blank">👉 Conferir Produto</a>
+      </div>
+
+      <!-- Produto 3 -->
+      <div class="card">
+        <img src="https://i.imgur.com/ATXi3B3.jpeg" alt="Suporte Para Escova De Dentes UV" />
+        <h3>Suporte Para Escova De Dentes Esterilizador Com Luz UV Antibacteriano Automático De Creme Dental</h3>
+        <a class="btn" href="https://s.shopee.com.br/4VQeUkVWYU" target="_blank">👉 Conferir Produto</a>
+      </div>
+
+      <!-- Produto 4 (novo) -->
+      <div class="card">
+        <img src="AQUI-COLOQUE-O-LINK-DA-IMAGEM" alt="Projetor Estrela LED Rotativa" />
+        <h3>Projetor Estrela LED Rotativa Onda Oceânica e Nebulosa Luz Nocturna Romântica para Festa e Christmas Gift</h3>
+        <a class="btn" href="https://s.shopee.com.br/800WeOgOQj" target="_blank">👉 Conferir Produto</a>
+      </div>
+
+      <!-- Produto 5 (novo) -->
+      <div class="card">
+        <img src="https://i.imgur.com/GcGwd8v.jpeg" alt="Mini Liquidificador Portátil" />
+        <h3>Mini Liquidificador Portátil Shake 6 Laminas + Cabo USB</h3>
+        <a class="btn" href="https://s.shopee.com.br/8zt3qreQnq" target="_blank">👉 Conferir Produto</a>
+      </div>
+
     </div>
-
-    <!-- Produto 2 -->
-    <div class="card">
-      <img src="https://i.imgur.com/futnWqe.jpeg" alt="Produto 2">
-      <h3>Espelho Redondo Lapidado 60cm + Kit Instalação</h3>
-      <a class="btn" href="https://s.shopee.com.br/gDvu9A24w" target="_blank">👉 Quero Conferir</a>
-    </div>
-
-    <!-- Produto 3 -->
-    <div class="card">
-      <img src="https://i.imgur.com/ATXi3B3.jpeg" alt="Produto 3">
-      <h3>Suporte De Escova De Dentes UV Esterilizador</h3>
-      <a class="btn" href="https://s.shopee.com.br/4VQeUkVWYU" target="_blank">👉 Quero Conferir</a>
-    </div>
-
   </div>
 
 </body>
