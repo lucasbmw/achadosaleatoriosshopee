@@ -20,7 +20,7 @@
       font-weight: bold;
       font-size: 24px;
       border-radius: 8px;
-      margin: 24px auto;
+      margin: 24px auto 16px;
       max-width: 600px;
     }
     header span {
@@ -28,6 +28,27 @@
       font-size: 16px;
       font-weight: normal;
       margin-top: 6px;
+    }
+    #search-container {
+      max-width: 600px;
+      margin: 0 auto 32px;
+      text-align: center;
+    }
+    #search-input {
+      width: 100%;
+      max-width: 400px;
+      padding: 10px 16px;
+      font-size: 16px;
+      border-radius: 30px;
+      border: 2px solid #ee4d2d;
+      outline: none;
+      transition: border-color 0.3s ease;
+      background-color: #111;
+      color: white;
+    }
+    #search-input:focus {
+      border-color: #ff642e;
+      box-shadow: 0 0 8px #ff642e88;
     }
     main {
       display: flex;
@@ -45,7 +66,7 @@
       background-color: #111;
       box-shadow: 0 0 10px #ee4d2d44;
       transition: transform 0.3s ease;
-      flex: 1 1 300px; /* Flex-grow, shrink, basis */
+      flex: 1 1 300px;
       max-width: 320px;
       display: flex;
       flex-direction: column;
@@ -101,7 +122,12 @@
     Achadinhos da Shopee 🛒
     <span>Confira os melhores produtos com um clique!</span>
   </header>
-  <main>
+
+  <div id="search-container">
+    <input type="text" id="search-input" placeholder="🔍 Pesquise produtos..." />
+  </div>
+
+  <main id="produtos-container">
     <div class="produto">
       <img src="https://i.imgur.com/RDpJTuf.jpeg" alt="3D Led Relógio De Parede Digital" />
       <h3>3D Led Relógio De Parede Digital / Design Moderno Luz Noturna Decoração Relógios / Mesa De Desktop Decoração De Casa</h3>
@@ -120,8 +146,26 @@
       <a class="btn-link" href="https://s.shopee.com.br/4VQeUkVWYU" target="_blank" rel="noopener noreferrer">🛒 Comprar na Shopee</a>
     </div>
   </main>
+
+  <script>
+    const input = document.getElementById('search-input');
+    const produtos = document.querySelectorAll('.produto');
+
+    input.addEventListener('input', () => {
+      const filtro = input.value.toLowerCase();
+      produtos.forEach(produto => {
+        const titulo = produto.querySelector('h3').textContent.toLowerCase();
+        if(titulo.includes(filtro)) {
+          produto.style.display = 'flex';
+        } else {
+          produto.style.display = 'none';
+        }
+      });
+    });
+  </script>
 </body>
 </html>
+
 
 
 
