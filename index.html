@@ -16,8 +16,8 @@
     body {
       margin: 0; padding: 0;
       font-family: 'Roboto', sans-serif;
-      background: #f9fafb;
-      color: #2d3748;
+      background: #121212; /* preto bem escuro */
+      color: #f5f5f5; /* quase branco */
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -28,17 +28,17 @@
       font-family: 'Poppins', sans-serif;
       font-weight: 600;
       font-size: 3.2rem;
-      color: #ff5722;
+      color: #ff6700; /* laranja vibrante */
       margin-bottom: 8px;
       text-align: center;
-      text-shadow: 0 2px 8px rgba(255, 87, 34, 0.4);
+      text-shadow: 0 2px 8px rgba(255, 103, 0, 0.6);
       letter-spacing: 0.04em;
     }
     p.subtitle {
       font-size: 1.3rem;
       margin-top: 0;
       margin-bottom: 48px;
-      color: #718096;
+      color: #cccccc;
       text-align: center;
       max-width: 600px;
       line-height: 1.5;
@@ -54,9 +54,9 @@
     }
     
     .card {
-      background: #ffffff;
+      background: #1e1e1e;
       border-radius: 20px;
-      box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+      box-shadow: 0 12px 28px rgba(255,103,0,0.3);
       overflow: hidden;
       display: flex;
       flex-direction: column;
@@ -65,7 +65,7 @@
     }
     .card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 22px 38px rgba(0,0,0,0.18);
+      box-shadow: 0 22px 38px rgba(255,103,0,0.6);
     }
     
     .card img {
@@ -73,6 +73,7 @@
       height: 220px;
       object-fit: cover;
       transition: transform 0.3s ease;
+      border-bottom: 3px solid #ff6700;
     }
     .card:hover img {
       transform: scale(1.05);
@@ -90,7 +91,7 @@
       font-family: 'Poppins', sans-serif;
       font-weight: 600;
       font-size: 1.15rem;
-      color: #2d3748;
+      color: #f5f5f5;
       margin: 0 0 16px 0;
       line-height: 1.3;
       min-height: 72px;
@@ -98,19 +99,23 @@
     
     .card-button {
       align-self: flex-start;
-      background-color: #ff5722;
-      color: white;
+      background-color: #ff6700;
+      color: #121212;
       padding: 14px 28px;
-      font-weight: 600;
+      font-weight: 700;
       border-radius: 50px;
       text-decoration: none;
-      box-shadow: 0 6px 18px rgba(255, 87, 34, 0.42);
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 6px 18px rgba(255, 103, 0, 0.6);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
       user-select: none;
+      font-size: 1rem;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
     }
     .card-button:hover {
-      background-color: #e64a19;
-      box-shadow: 0 8px 24px rgba(230, 74, 25, 0.6);
+      background-color: #e55a00;
+      box-shadow: 0 8px 24px rgba(229, 90, 0, 0.8);
+      color: #fff;
     }
     
     /* Responsividade */
@@ -138,7 +143,7 @@
       <img src="https://i.imgur.com/RDpJTuf.jpeg" alt="3D Led Relógio De Parede Digital" />
       <div class="card-content">
         <h2 class="card-title">3D Led Relógio De Parede Digital / Design Moderno Luz Noturna Decoração Relógios / Mesa De Desktop Decoração De Casa</h2>
-        <a href="https://s.shopee.com.br/5AgLIiJ8Rt" target="_blank" rel="noopener noreferrer" class="card-button" aria-label="Ver 3D Led Relógio De Parede Digital na Shopee">🔗 Ver na Shopee</a>
+        <a href="https://s.shopee.com.br/5AgLIiJ8Rt" target="_blank" rel="noopener noreferrer" class="card-button" aria-label="Comprar 3D Led Relógio De Parede Digital na Shopee">Comprar Agora</a>
       </div>
     </article>
 
@@ -146,7 +151,7 @@
       <img src="https://i.imgur.com/futnWqe.jpeg" alt="Espelho Redondo Lapidado" />
       <div class="card-content">
         <h2 class="card-title">Espelho Redondo Lapidado 60cm Para Sala + Kit Instalação</h2>
-        <a href="https://s.shopee.com.br/gDvu9A24w" target="_blank" rel="noopener noreferrer" class="card-button" aria-label="Ver Espelho Redondo Lapidado na Shopee">🔗 Ver na Shopee</a>
+        <a href="https://s.shopee.com.br/gDvu9A24w" target="_blank" rel="noopener noreferrer" class="card-button" aria-label="Comprar Espelho Redondo Lapidado na Shopee">Comprar Agora</a>
       </div>
     </article>
 
@@ -154,7 +159,7 @@
       <img src="https://i.imgur.com/ATXi3B3.jpeg" alt="Suporte Para Escova De Dentes UV" />
       <div class="card-content">
         <h2 class="card-title">Suporte Para Escova De Dentes Esterilizador Com Luz UV Antibacteriano Automático De Creme Dental</h2>
-        <a href="https://s.shopee.com.br/4VQeUkVWYU" target="_blank" rel="noopener noreferrer" class="card-button" aria-label="Ver Suporte Para Escova De Dentes UV na Shopee">🔗 Ver na Shopee</a>
+        <a href="https://s.shopee.com.br/4VQeUkVWYU" target="_blank" rel="noopener noreferrer" class="card-button" aria-label="Comprar Suporte Para Escova De Dentes UV na Shopee">Comprar Agora</a>
       </div>
     </article>
 
