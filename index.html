@@ -3,170 +3,109 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Achadinhos da Shopee | Produtos Imperdíveis</title>
-  
-  <!-- Google Fonts: Poppins e Roboto -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap" rel="stylesheet" />
-  
+  <title>Achadinhos da Shopee</title>
   <style>
-    /* Reset simples */
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
     body {
-      margin: 0; padding: 0;
-      font-family: 'Roboto', sans-serif;
-      background: #121212; /* preto bem escuro */
-      color: #f5f5f5; /* quase branco */
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 48px 24px;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0 16px 40px;
     }
-    h1 {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 600;
-      font-size: 3.2rem;
-      color: #ff6700; /* laranja vibrante */
-      margin-bottom: 8px;
+    header {
+      background-color: #ee4d2d;
+      padding: 20px 0;
       text-align: center;
-      text-shadow: 0 2px 8px rgba(255, 103, 0, 0.6);
-      letter-spacing: 0.04em;
-    }
-    p.subtitle {
-      font-size: 1.3rem;
-      margin-top: 0;
-      margin-bottom: 48px;
-      color: #cccccc;
-      text-align: center;
+      color: white;
+      font-weight: bold;
+      font-size: 24px;
+      border-radius: 8px;
+      margin: 24px auto;
       max-width: 600px;
-      line-height: 1.5;
-      font-weight: 500;
     }
-    
-    .products-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 36px;
-      width: 100%;
-      max-width: 1040px;
+    header span {
+      display: block;
+      font-size: 16px;
+      font-weight: normal;
+      margin-top: 6px;
     }
-    
-    .card {
-      background: #1e1e1e;
-      border-radius: 20px;
-      box-shadow: 0 12px 28px rgba(255,103,0,0.3);
-      overflow: hidden;
+    main {
       display: flex;
       flex-direction: column;
-      transition: transform 0.35s cubic-bezier(0.4,0,0.2,1), box-shadow 0.35s cubic-bezier(0.4,0,0.2,1);
-      cursor: pointer;
+      gap: 32px;
+      align-items: center;
+      max-width: 800px;
+      margin: 0 auto;
     }
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 22px 38px rgba(255,103,0,0.6);
-    }
-    
-    .card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
+    .produto {
+      border: 1px solid #ee4d2d;
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+      max-width: 400px;
+      background-color: #111;
+      box-shadow: 0 0 10px #ee4d2d44;
       transition: transform 0.3s ease;
-      border-bottom: 3px solid #ff6700;
     }
-    .card:hover img {
+    .produto:hover {
       transform: scale(1.05);
+      box-shadow: 0 0 20px #ee4d2d88;
     }
-    
-    .card-content {
-      padding: 24px 28px;
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+    .produto img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 12px;
     }
-    
-    .card-title {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 600;
-      font-size: 1.15rem;
-      color: #f5f5f5;
-      margin: 0 0 16px 0;
-      line-height: 1.3;
+    .produto h3 {
+      font-size: 18px;
+      margin: 8px 0 16px;
       min-height: 72px;
     }
-    
-    .card-button {
-      align-self: flex-start;
-      background-color: #ff6700;
-      color: #121212;
-      padding: 14px 28px;
-      font-weight: 700;
-      border-radius: 50px;
+    .btn-link {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #ee4d2d;
+      color: white;
       text-decoration: none;
-      box-shadow: 0 6px 18px rgba(255, 103, 0, 0.6);
-      transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
-      user-select: none;
-      font-size: 1rem;
-      letter-spacing: 0.02em;
-      text-transform: uppercase;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 16px;
+      box-shadow: 0 4px 10px #ee4d2dcc;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
     }
-    .card-button:hover {
-      background-color: #e55a00;
-      box-shadow: 0 8px 24px rgba(229, 90, 0, 0.8);
-      color: #fff;
-    }
-    
-    /* Responsividade */
-    @media (max-width: 380px) {
-      body {
-        padding: 36px 16px;
-      }
-      h1 {
-        font-size: 2.6rem;
-      }
-      .card img {
-        height: 180px;
-      }
+    .btn-link:hover {
+      background-color: #ff642e;
+      box-shadow: 0 6px 15px #ff642eee;
     }
   </style>
 </head>
 <body>
-
-  <h1>Achadinhos da Shopee 🛒</h1>
-  <p class="subtitle">Confira os melhores produtos com um clique! Produtos selecionados com carinho para você economizar e arrasar nas compras.</p>
-
-  <main class="products-grid">
-
-    <article class="card" tabindex="0">
+  <header>
+    Achadinhos da Shopee 🛒
+    <span>Confira os melhores produtos com um clique!</span>
+  </header>
+  <main>
+    <div class="produto">
       <img src="https://i.imgur.com/RDpJTuf.jpeg" alt="3D Led Relógio De Parede Digital" />
-      <div class="card-content">
-        <h2 class="card-title">3D Led Relógio De Parede Digital / Design Moderno Luz Noturna Decoração Relógios / Mesa De Desktop Decoração De Casa</h2>
-        <a href="https://s.shopee.com.br/5AgLIiJ8Rt" target="_blank" rel="noopener noreferrer" class="card-button" aria-label="Comprar 3D Led Relógio De Parede Digital na Shopee">Comprar Agora</a>
-      </div>
-    </article>
+      <h3>3D Led Relógio De Parede Digital / Design Moderno Luz Noturna Decoração Relógios / Mesa De Desktop Decoração De Casa</h3>
+      <a class="btn-link" href="https://s.shopee.com.br/5AgLIiJ8Rt" target="_blank" rel="noopener noreferrer">🛒 Comprar na Shopee</a>
+    </div>
 
-    <article class="card" tabindex="0">
+    <div class="produto">
       <img src="https://i.imgur.com/futnWqe.jpeg" alt="Espelho Redondo Lapidado" />
-      <div class="card-content">
-        <h2 class="card-title">Espelho Redondo Lapidado 60cm Para Sala + Kit Instalação</h2>
-        <a href="https://s.shopee.com.br/gDvu9A24w" target="_blank" rel="noopener noreferrer" class="card-button" aria-label="Comprar Espelho Redondo Lapidado na Shopee">Comprar Agora</a>
-      </div>
-    </article>
+      <h3>Espelho Redondo Lapidado 60cm Para Sala + Kit Instalação</h3>
+      <a class="btn-link" href="https://s.shopee.com.br/gDvu9A24w" target="_blank" rel="noopener noreferrer">🛒 Comprar na Shopee</a>
+    </div>
 
-    <article class="card" tabindex="0">
+    <div class="produto">
       <img src="https://i.imgur.com/ATXi3B3.jpeg" alt="Suporte Para Escova De Dentes UV" />
-      <div class="card-content">
-        <h2 class="card-title">Suporte Para Escova De Dentes Esterilizador Com Luz UV Antibacteriano Automático De Creme Dental</h2>
-        <a href="https://s.shopee.com.br/4VQeUkVWYU" target="_blank" rel="noopener noreferrer" class="card-button" aria-label="Comprar Suporte Para Escova De Dentes UV na Shopee">Comprar Agora</a>
-      </div>
-    </article>
-
+      <h3>Suporte Para Escova De Dentes Esterilizador Com Luz UV Antibacteriano Automático De Creme Dental</h3>
+      <a class="btn-link" href="https://s.shopee.com.br/4VQeUkVWYU" target="_blank" rel="noopener noreferrer">🛒 Comprar na Shopee</a>
+    </div>
   </main>
-
 </body>
 </html>
+
 
 
 
