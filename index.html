@@ -6,55 +6,48 @@
   <title>Achadinhos da Shopee</title>
   <style>
     body {
-      font-family: sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 20px;
+      padding: 24px 16px;
       background: #f9f9f9;
       color: #333;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
-    header {
+    h1 {
+      margin-bottom: 8px;
+      font-size: 28px;
       text-align: center;
-      margin-bottom: 40px;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.2rem;
-    }
-    header p {
-      font-size: 1.1rem;
+    p.subtitle {
+      margin-top: 0;
+      margin-bottom: 32px;
+      font-size: 16px;
       color: #666;
-      margin-top: 8px;
+      text-align: center;
     }
-    .produtos {
-      display: flex;
-      flex-direction: column;
-      gap: 32px;
-      max-width: 800px;
-      width: 100%;
-      align-items: center;
-    }
-    .produto {
+    .product {
       background: white;
       border: 1px solid #ccc;
       border-radius: 12px;
       padding: 16px;
       max-width: 400px;
+      margin-bottom: 32px;
       text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      width: 100%;
     }
-    .produto img {
+    .product img {
       width: 100%;
       border-radius: 8px;
       margin-bottom: 12px;
     }
-    .produto h3 {
+    .product h3 {
       font-size: 18px;
-      margin: 8px 0;
+      margin: 8px 0 16px;
     }
-    .produto a {
+    .product a {
       display: inline-block;
       padding: 10px 20px;
       background-color: #ee4d2d;
@@ -64,320 +57,34 @@
       font-weight: bold;
       transition: background-color 0.3s ease;
     }
-    .produto a:hover {
-      background-color: #cc3d20;
+    .product a:hover {
+      background-color: #cc3e22;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Achadinhos da Shopee 🛒</h1>
-    <p>Confira os melhores produtos com um clique!</p>
-  </header>
+  <h1>Achadinhos da Shopee 🛒</h1>
+  <p class="subtitle">Confira os melhores produtos com um clique!</p>
 
-  <main class="produtos">
-    <div class="produto">
-      <img src="https://i.imgur.com/RDpJTuf.jpeg" alt="3D Led Relógio De Parede Digital" />
-      <h3>3D Led Relógio De Parede Digital / Design Moderno Luz Noturna Decoração Relógios / Mesa De Desktop Decoração De Casa</h3>
-      <a href="https://s.shopee.com.br/5AgLIiJ8Rt" target="_blank" rel="noopener noreferrer">🔗 Ver na Shopee</a>
-    </div>
-
-    <div class="produto">
-      <img src="https://i.imgur.com/futnWqe.jpeg" alt="Espelho Redondo Lapidado" />
-      <h3>Espelho Redondo Lapidado 60cm Para Sala + Kit Instalação</h3>
-      <a href="https://s.shopee.com.br/gDvu9A24w" target="_blank" rel="noopener noreferrer">🔗 Ver na Shopee</a>
-    </div>
-
-    <div class="produto">
-      <img src="https://i.imgur.com/ATXi3B3.jpeg" alt="Suporte Para Escova De Dentes UV" />
-      <h3>Suporte Para Escova De Dentes Esterilizador Com Luz UV Antibacteriano Automático De Creme Dental</h3>
-      <a href="https://s.shopee.com.br/4VQeUkVWYU" target="_blank" rel="noopener noreferrer">🔗 Ver na Shopee</a>
-    </div>
-  </main>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Achadinhos da Shopee</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      max-width: 800px;
-      margin: 24px auto;
-      padding: 0 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 32px;
-      align-items: center;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 32px;
-    }
-    header h1 {
-      font-size: 28px;
-      margin-bottom: 8px;
-    }
-    header p {
-      font-size: 18px;
-      color: #555;
-    }
-    .produto {
-      border: 1px solid #ccc;
-      border-radius: 12px;
-      padding: 16px;
-      text-align: center;
-      max-width: 400px;
-      width: 100%;
-    }
-    .produto img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 12px;
-    }
-    .produto h3 {
-      font-size: 18px;
-      margin: 8px 0;
-    }
-    .produto a {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #ee4d2d;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <h1>Achadinhos da Shopee 🛒</h1>
-    <p>Confira os melhores produtos com um clique!</p>
-  </header>
-
-  <div class="produto">
-    <h3>Produto Incrível 1 🔥</h3>
+  <div class="product">
+    <img src="https://i.imgur.com/RDpJTuf.jpeg" alt="3D Led Relógio De Parede Digital" />
+    <h3>3D Led Relógio De Parede Digital / Design Moderno Luz Noturna Decoração Relógios / Mesa De Desktop Decoração De Casa</h3>
+    <a href="https://s.shopee.com.br/5AgLIiJ8Rt" target="_blank" rel="noopener noreferrer">🔗 Ver na Shopee</a>
   </div>
 
-  <div class="produto">
-    <h3>Achado Imperdível 2 💡</h3>
+  <div class="product">
+    <img src="https://i.imgur.com/futnWqe.jpeg" alt="Espelho Redondo Lapidado" />
+    <h3>Espelho Redondo Lapidado 60cm Para Sala + Kit Instalação</h3>
+    <a href="https://s.shopee.com.br/gDvu9A24w" target="_blank" rel="noopener noreferrer">🔗 Ver na Shopee</a>
   </div>
 
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Achadinhos da Shopee</title>
-</head>
-<body style="background-color: #f9f9f9; margin: 0; padding: 0; font-family: Arial, sans-serif;">
-
-  <!-- Cabeçalho -->
-  <header style="background-color: #ee4d2d; color: white; padding: 20px 0; text-align: center;">
-    <h1 style="margin: 0; font-size: 32px;">Achadinhos da Shopee 🛒</h1>
-    <p style="margin: 8px 0 0; font-size: 18px;">Confira os melhores produtos com um clique!</p>
-  </header>
-
-  <!-- Conteúdo -->
-  <main style="display: flex; flex-direction: column; gap: 32px; align-items: center; max-width: 1000px; margin: 40px auto; padding: 0 20px;">
-
-    <!-- Produto 1 -->
-    <div style="background: white; border: 1px solid #ccc; border-radius: 12px; padding: 16px; text-align: center; width: 100%; max-width: 400px;">
-      <img src="https://i.imgur.com/RDpJTuf.jpeg" alt="3D Led Relógio De Parede Digital" style="width: 100%; border-radius: 8px; margin-bottom: 12px;" />
-      <h3 style="font-size: 18px; margin: 8px 0;">3D Led Relógio De Parede Digital / Design Moderno Luz Noturna Decoração Relógios / Mesa De Desktop Decoração De Casa</h3>
-      <a href="https://s.shopee.com.br/5AgLIiJ8Rt" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: #ee4d2d; color: white; text-decoration: none; border-radius: 8px; font-weight: bold;">🔗 Ver na Shopee</a>
-    </div>
-
-    <!-- Produto 2 -->
-    <div style="background: white; border: 1px solid #ccc; border-radius: 12px; padding: 16px; text-align: center; width: 100%; max-width: 400px;">
-      <img src="https://i.imgur.com/futnWqe.jpeg" alt="Espelho Redondo Lapidado" style="width: 100%; border-radius: 8px; margin-bottom: 12px;" />
-      <h3 style="font-size: 18px; margin: 8px 0;">Espelho Redondo Lapidado 60cm Para Sala + Kit Instalação</h3>
-      <a href="https://s.shopee.com.br/gDvu9A24w" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: #ee4d2d; color: white; text-decoration: none; border-radius: 8px; font-weight: bold;">🔗 Ver na Shopee</a>
-    </div>
-
-    <!-- Produto 3 -->
-    <div style="background: white; border: 1px solid #ccc; border-radius: 12px; padding: 16px; text-align: center; width: 100%; max-width: 400px;">
-      <img src="https://i.imgur.com/ATXi3B3.jpeg" alt="Suporte Para Escova De Dentes UV" style="width: 100%; border-radius: 8px; margin-bottom: 12px;" />
-      <h3 style="font-size: 18px; margin: 8px 0;">Suporte Para Escova De Dentes Esterilizador Com Luz UV Antibacteriano Automático De Creme Dental</h3>
-      <a href="https://s.shopee.com.br/4VQeUkVWYU" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: #ee4d2d; color: white; text-decoration: none; border-radius: 8px; font-weight: bold;">🔗 Ver na Shopee</a>
-    </div>
-
-  </main>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Achadinhos da Shopee</title>
-</head>
-<body style="background-color: #fff; margin: 0; padding: 20px; font-family: sans-serif;">
-
-  <!-- Título no topo -->
-  <div style="text-align: center; margin-bottom: 40px;">
-    <h1 style="font-size: 28px; margin: 0;">Achadinhos da Shopee 🛒</h1>
-    <p style="font-size: 18px; margin-top: 8px;">Confira os melhores produtos com um clique!</p>
-  </div>
-
-  <!-- Produtos -->
-  <div style="display: flex; flex-direction: column; gap: 32px; align-items: center; max-width: 800px; margin: 0 auto;">
-
-    <!-- Produto 1 -->
-    <div style="border: 1px solid #ccc; border-radius: 12px; padding: 16px; text-align: center; max-width: 400px;">
-      <img src="https://i.imgur.com/RDpJTuf.jpeg" alt="3D Led Relógio De Parede Digital" style="width: 100%; border-radius: 8px; margin-bottom: 12px;" />
-      <h3 style="font-size: 18px; margin: 8px 0;">3D Led Relógio De Parede Digital / Design Moderno Luz Noturna Decoração Relógios / Mesa De Desktop Decoração De Casa</h3>
-      <a href="https://s.shopee.com.br/5AgLIiJ8Rt" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: #ee4d2d; color: white; text-decoration: none; border-radius: 8px; font-weight: bold;">🔗 Ver na Shopee</a>
-    </div>
-
-    <!-- Produto 2 -->
-    <div style="border: 1px solid #ccc; border-radius: 12px; padding: 16px; text-align: center; max-width: 400px;">
-      <img src="https://i.imgur.com/futnWqe.jpeg" alt="Espelho Redondo Lapidado" style="width: 100%; border-radius: 8px; margin-bottom: 12px;" />
-      <h3 style="font-size: 18px; margin: 8px 0;">Espelho Redondo Lapidado 60cm Para Sala + Kit Instalação</h3>
-      <a href="https://s.shopee.com.br/gDvu9A24w" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: #ee4d2d; color: white; text-decoration: none; border-radius: 8px; font-weight: bold;">🔗 Ver na Shopee</a>
-    </div>
-
-    <!-- Produto 3 -->
-    <div style="border: 1px solid #ccc; border-radius: 12px; padding: 16px; text-align: center; max-width: 400px;">
-      <img src="https://i.imgur.com/ATXi3B3.jpeg" alt="Suporte Para Escova De Dentes UV" style="width: 100%; border-radius: 8px; margin-bottom: 12px;" />
-      <h3 style="font-size: 18px; margin: 8px 0;">Suporte Para Escova De Dentes Esterilizador Com Luz UV Antibacteriano Automático De Creme Dental</h3>
-      <a href="https://s.shopee.com.br/4VQeUkVWYU" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: #ee4d2d; color: white; text-decoration: none; border-radius: 8px; font-weight: bold;">🔗 Ver na Shopee</a>
-    </div>
-
-  </div>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Achados Aleatórios Shopee</title>
-</head>
-<body style="background-color: #f9f9f9; margin: 0; padding: 20px;">
-
-  <div style="display: flex; flex-direction: column; gap: 32px; align-items: center; max-width: 800px; margin: 0 auto; font-family: sans-serif;">
-
-    <!-- Produto 1 -->
-    <div style="border: 1px solid #ccc; border-radius: 12px; padding: 16px; text-align: center; max-width: 400px; background: white;">
-      <img src="https://i.imgur.com/RDpJTuf.jpeg" alt="3D Led Relógio De Parede Digital" style="width: 100%; border-radius: 8px; margin-bottom: 12px;" />
-      <h3 style="font-size: 18px; margin: 8px 0;">3D Led Relógio De Parede Digital / Design Moderno Luz Noturna Decoração Relógios / Mesa De Desktop Decoração De Casa</h3>
-      <a href="https://s.shopee.com.br/5AgLIiJ8Rt" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: #ee4d2d; color: white; text-decoration: none; border-radius: 8px; font-weight: bold;">🔗 Ver na Shopee</a>
-    </div>
-
-    <!-- Produto 2 -->
-    <div style="border: 1px solid #ccc; border-radius: 12px; padding: 16px; text-align: center; max-width: 400px; background: white;">
-      <img src="https://i.imgur.com/futnWqe.jpeg" alt="Espelho Redondo Lapidado" style="width: 100%; border-radius: 8px; margin-bottom: 12px;" />
-      <h3 style="font-size: 18px; margin: 8px 0;">Espelho Redondo Lapidado 60cm Para Sala + Kit Instalação</h3>
-      <a href="https://s.shopee.com.br/gDvu9A24w" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: #ee4d2d; color: white; text-decoration: none; border-radius: 8px; font-weight: bold;">🔗 Ver na Shopee</a>
-    </div>
-
-    <!-- Produto 3 -->
-    <div style="border: 1px solid #ccc; border-radius: 12px; padding: 16px; text-align: center; max-width: 400px; background: white;">
-      <img src="https://i.imgur.com/ATXi3B3.jpeg" alt="Suporte Para Escova De Dentes UV" style="width: 100%; border-radius: 8px; margin-bottom: 12px;" />
-      <h3 style="font-size: 18px; margin: 8px 0;">Suporte Para Escova De Dentes Esterilizador Com Luz UV Antibacteriano Automático De Creme Dental</h3>
-      <a href="https://s.shopee.com.br/4VQeUkVWYU" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: #ee4d2d; color: white; text-decoration: none; border-radius: 8px; font-weight: bold;">🔗 Ver na Shopee</a>
-    </div>
-
+  <div class="product">
+    <img src="https://i.imgur.com/ATXi3B3.jpeg" alt="Suporte Para Escova De Dentes UV" />
+    <h3>Suporte Para Escova De Dentes Esterilizador Com Luz UV Antibacteriano Automático De Creme Dental</h3>
+    <a href="https://s.shopee.com.br/4VQeUkVWYU" target="_blank" rel="noopener noreferrer">🔗 Ver na Shopee</a>
   </div>
 
 </body>
 </html>
 
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Achadinhos da Shopee 🛒</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #000;
-      color: #fff;
-      text-align: center;
-    }
-
-    header {
-      background-color: #ff5722;
-      color: #000;
-      padding: 2rem 1rem;
-      border-bottom: 5px solid #e64a19;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.2rem;
-    }
-
-    header p {
-      margin-top: 0.5rem;
-      font-size: 1rem;
-      color: #111;
-    }
-
-    .container {
-      padding: 2rem 1rem;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .link-card {
-      background: #111;
-      padding: 1rem;
-      border-radius: 12px;
-      margin-bottom: 1rem;
-      box-shadow: 0 2px 6px rgba(255,87,34,0.3);
-      transition: transform 0.2s;
-    }
-
-    .link-card:hover {
-      transform: scale(1.02);
-    }
-
-    .link-card a {
-      text-decoration: none;
-      color: #ff5722;
-      font-weight: bold;
-      font-size: 1rem;
-    }
-
-    footer {
-      padding: 2rem 1rem;
-      font-size: 0.875rem;
-      color: #888;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Achadinhos da Shopee 🛒</h1>
-    <p>Confira os melhores produtos com um clique!</p>
-  </header>
-
-  <div class="container">
-    <div class="link-card">
-      <a href="https://shopee.com.br/exemplo1" target="_blank">Produto Incrível 1 🔥</a>
-    </div>
-    <div class="link-card">
-      <a href="https://shopee.com.br/exemplo2" target="_blank">Achado Imperdível 2 💡</a>
-    </div>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 Achadinhos da Shopee. Todos os direitos reservados.</p>
-  </footer>
-</body>
-</html>
